@@ -1,0 +1,12 @@
+- model: pfolio.socialmedia
+  pk: 1
+  fields:
+    email: hassangpoor@gmail.com
+    linkedin: /in/hassan-gholipoor
+    linkedin_url: https://www.linkedin.com/in/hassan-gholipoor/
+    twitter: /haassaan_gh
+    twitter_url: https://twitter.com/haassaan_gh
+    facebook: 
+    facebook_url: 
+    instagram: 
+    instagram_url: 

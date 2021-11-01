@@ -1,0 +1,14 @@
+- model: pfolio.category
+  pk: 1
+  fields:
+    type: f
+
+- model: pfolio.category
+  pk: 2
+  fields:
+    type: b
+
+- model: pfolio.category
+  pk: 3
+  fields:
+    type: o

@@ -1,0 +1,8 @@
+- model: pfolio.education
+  pk: 1
+  fields:
+    timespan: 2019 Until Now
+    title: Management
+    institute: Azad University, Tehran
+    link: 
+    description: 

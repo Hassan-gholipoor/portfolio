@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  
+  <title>Welcome</title>
+
+  <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/themify-icons.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/animate/animate.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/owl-carousel/owl.carousel.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/nice-select/css/nice-select.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/vendor/fancybox/css/jquery.fancybox.min.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/virtual.css' %}">
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/topbar.virtual.css' %}">
+</head>
+<body class="theme-red">
+  
+  <!-- Back to top button -->
+  <div class="btn-back_to_top">
+    <span class="ti-arrow-up"></span>
+  </div>
+  
+  <!-- Setting button -->
+  <div class="config">
+    <div class="template-config">
+      <!-- Settings -->
+      <div class="d-block">
+        <button class="btn btn-fab btn-sm" id="sideel" title="Settings"><span class="ti-settings"></span></button>
+      </div>
+    </div>
+    <div class="set-menu">
+      <p>Select Color</p>
+      <div class="color-bar" data-toggle="selected">
+        <span class="color-item bg-theme-red selected" data-class="theme-red"></span>
+        <span class="color-item bg-theme-blue" data-class="theme-blue"></span>
+        <span class="color-item bg-theme-green" data-class="theme-green"></span>
+        <span class="color-item bg-theme-orange" data-class="theme-orange"></span>
+        <span class="color-item bg-theme-purple" data-class="theme-purple"></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="vg-page page-home" id="home" style="background-image: url({% static '/assets/img/bg_image_1.jpg' %})">
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-dark sticky" data-offset="500">
+      <div class="container">
+        <small class="navbar-brand">Folio</small>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#main-navbar" aria-expanded="true">
+          <span class="ti-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="#home" class="nav-link" data-animate="scrolling">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link" data-animate="scrolling">About</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- End Navbar -->
+    <!-- Caption header -->
+    <div class="caption-header text-center wow zoomInDown">
+      <h5 class="fw-normal">Welcome</h5>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Hassan</b> Gholipoor</h1>
+      <div class="badge">Junior Back-end Developer</div>
+    </div> <!-- End Caption header -->
+
+  </div>
+  
+  <div class="vg-page page-about" id="about">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="img-place wow fadeInUp">
+            <img src="{{ personal.image.url }}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1 wow fadeInRight">
+          <h1 class="fw-light">{{personal.fullname}}</h1>
+          <h5 class="fg-theme mb-3">{{ personal.career}}</h5>
+          <p class="text-muted">{{personal.about}}</p>
+          <ul class="theme-list">
+            <li><b>From:</b> {{personal.city}}, {{personal.country}}</li>
+            <li><b>Lives In:</b> {{personal.city}}, {{personal.country}}</li>
+            <li><b>Age:</b> {{personal.age}}</li>
+            <li><b>Gender:</b> {{personal.Gender}}</li>
+          </ul>
+          <a href={{personal.cv_link}}><button class="btn btn-theme-outline">Download CV</button></a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="container py-5">
+      <h1 class="text-center fw-normal wow fadeIn">My Skills</h1>
+      <hr>
+      <div class="row py-3">
+        <div class="col-md-4">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Back-end skills</h4>
+            {% for item in skills %}
+              {% if item.category.type == "b" %}
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">{{item.language}}</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{item.percent}}%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{item.percent}}%</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Front-end Skills</h4>
+            {% for item in skills %}
+              {% if item.category.type == "f" %}
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">{{item.language}}</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{item.percent}}%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{item.percent}}%</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="px-lg-3">
+            <h4 class="wow fadeInUp">Other Skills</h4>
+            {% for item in skills %}
+              {% if item.category.type == "o" %}
+                <div class="progress-wrapper wow fadeInUp">
+                  <span class="caption">{{item.language}}</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{item.percent}}%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">{{item.percent}}%</div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-md-6 wow fadeInRight">
+          <h2 class="fw-normal">Education</h2>
+          <ul class="timeline mt-4 pr-md-5">
+            {% for item in ed %}
+              <li>
+                <div class="title">{{item.timespan}}</div>
+                <div class="details">
+                  <h5>{{item.title}}</h5>
+                  <small class="fg-theme">{{item.institute}}</small>
+                  {% if item.link %}
+                    <a href={{item.link}}>Click here to visit more</a>
+                  {% endif %}
+                  {% if item.description %}
+                    <p>{{item.description}}</p>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
+          <h2 class="fw-normal">Experience</h2>
+          <ul class="timeline mt-4 pr-md-5">
+            {% for item in ex %}
+              <li>
+                <div class="title">{{item.timespan}}</div>
+                <div class="details">
+                  <h5>{{item.title}}</h5>
+                  <small class="fg-theme"></small>
+                  {% if item.institute %}
+                    <p>{{item.institute}}</p>
+                  {% endif %}
+                  <small class="fg-theme"></small>
+                  <p>{{item.description}}</p>
+                  <small class="fg-theme"></small>
+                  <small class="fg-theme"></small>
+                  {% if item.link %}
+                    <a href={{item.link}} style="color: red;;" target="_blank">Click here to visit site</a>
+                  {% endif %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Footer -->
+  <div class="vg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 py-3">
+          <div class="footer-info">
+            <p>Where to find me</p>
+            <hr class="divider">
+            <p class="fs-large fg-white">{{personal.address}}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Follow me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li><a href={{social.linkedin_url}}>Linkedin</a></li>
+              <li><a href={{social.twitter_url}}>Twitter</a></li>
+              <li>Phone Number</li>
+              <li>Email</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 py-3">
+          <div class="float-lg-right">
+            <p>Contact me</p>
+            <hr class="divider">
+            <ul class="list-unstyled">
+              <li>{{social.linkedin}}</li>
+              <li>{{social.twitter}}</li>
+              <li>+{{personal.phone_number}}</li>
+              <li>{{social.email}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div> <!-- End footer -->
+  
+  
+  <script src="{% static '/assets/js/jquery-3.5.1.min.js' %}"></script>
+    
+  <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+    
+  <script src="{% static '/assets/vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+    
+  <script src="{% static '/assets/vendor/perfect-scrollbar/js/perfect-scrollbar.js' %}"></script>
+    
+  <script src="{% static '/assets/vendor/isotope/isotope.pkgd.min.js' %}"></script>
+    
+  <script src="{% static '/assets/vendor/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    
+  <script src="{% static '/assets/vendor/fancybox/js/jquery.fancybox.min.js' %}"></script>
+
+  <script src="{% static '/assets/vendor/wow/wow.min.js' %}"></script>
+
+  <script src="{% static '/assets/vendor/animateNumber/jquery.animateNumber.min.js' %}"></script>
+
+  <script src="{% static '/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+
+  <script src="{% static '/assets/js/google-maps.js' %}"></script>
+    
+  <script src="{% static '/assets/js/topbar-virtual.js' %}"></script>
+
+  
+</body>
+</html>

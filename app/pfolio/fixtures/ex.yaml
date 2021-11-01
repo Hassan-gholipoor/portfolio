@@ -1,0 +1,8 @@
+- model: pfolio.experience
+  pk: 1
+  fields:
+    timespan: 2021 February - July
+    title: Decorasio Store
+    institute: -
+    link: http://dev.decorasio.store/
+    description: Decorasio is a Home appliances store. I had coaporated as a junior back-end developer in there and And I learned the experience of working with DjangoRestFramework, Postgresql and Docker in this project

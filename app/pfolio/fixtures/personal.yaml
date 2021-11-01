@@ -1,0 +1,13 @@
+- model: pfolio.personal
+  pk: 1
+  fields:
+    fullname: Hassan Gholipoor
+    career: Junior Python Back-end Developer
+    about: I started to learn programing in 2018 with Html & Css, After a while I learned JavaScript but I was more passionate to learn back-end skills. So I commenced learning Python, Django and Django Rest Framework. I like to learn more and more and I'm trying to be updated.
+    city: Tehran
+    country: IRAN
+    address: Bakhshi Fard Alley, Madani Street Tehran, IRAN
+    phone_number: +989306135452
+    age: 21
+    cv_link: https://jobinja.ir/user/AQ-5269694/download
+    Gender: male

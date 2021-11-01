@@ -1,0 +1,84 @@
+- model: pfolio.skills
+  pk: 2
+  fields:
+    category: 2
+    language: Python
+    percent: 80
+
+- model: pfolio.skills
+  pk: 3
+  fields:
+    category: 2
+    language: Django
+    percent: 70
+
+- model: pfolio.skills
+  pk: 4
+  fields:
+    category: 2
+    language: Django Rest Framework
+    percent: 50
+
+- model: pfolio.skills
+  pk: 5
+  fields:
+    category: 2
+    language: Postgresql
+    percent: 50
+
+- model: pfolio.skills
+  pk: 6
+  fields:
+    category: 2
+    language: Docker
+    percent: 50
+
+- model: pfolio.skills
+  pk: 7
+  fields:
+    category: 2
+    language: Celery
+    percent: 50
+
+- model: pfolio.skills
+  pk: 8
+  fields:
+    category: 1
+    language: JavaScript Language
+    percent: 50
+
+- model: pfolio.skills
+  pk: 9
+  fields:
+    category: 1
+    language: Html
+    percent: 70
+
+- model: pfolio.skills
+  pk: 10
+  fields:
+    category: 1
+    language: CSS
+    percent: 60
+
+- model: pfolio.skills
+  pk: 11
+  fields:
+    category: 3
+    language: Design Patterns
+    percent: 50
+
+- model: pfolio.skills
+  pk: 12
+  fields:
+    category: 3
+    language: TDD
+    percent: 30
+
+- model: pfolio.skills
+  pk: 13
+  fields:
+    category: 3
+    language: Linux
+    percent: 30
+
